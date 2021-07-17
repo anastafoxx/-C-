@@ -1,0 +1,87 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+
+namespace proger21
+{
+    class Player
+    {
+        public enum VARIANTS
+        { Rock, Paper, Scissors }
+
+        private VARIANTS GetRandomVariant()
+        {
+            int z = (int)new Random().Next(2);
+            switch (z)
+            {
+                case 0:
+                    return VARIANTS.Rock;
+                case 1:
+                    return VARIANTS.Paper;
+                default:
+                    return VARIANTS.Scissors;
+            }
+        }
+
+        public string name = "Bot";
+        private VARIANTS var;
+
+        public Player(VARIANTS var,string name)
+        {
+            this.var = var;
+            this.name = name;
+        }
+
+        public Player()
+        {
+            name = "Bot";
+            var = GetRandomVariant();
+
+        }
+        public string whoWins(Player firstPlayer, Player secondPlayer)
+        {
+            Console.WriteLine($"player 1: {firstPlayer.name} choose {firstPlayer.var}");
+            Console.WriteLine($"player 2: {secondPlayer.name} choose {secondPlayer.var}");
+
+            List<VARIANTS> arr = new List<VARIANTS>();
+            arr.Add(VARIANTS.Rock);
+            arr.Add(VARIANTS.Paper);
+            arr.Add(VARIANTS.Scissors);
+
+            int i1 = arr.IndexOf(firstPlayer.var);
+            int i2 = arr.IndexOf(secondPlayer.var);
+
+            if (i1 == i2)
+                return "ничья";
+            if ((i1 - i2) == 1 || (i1 - i2) == -2)
+                return firstPlayer.name + " выиграл";
+            else
+                return secondPlayer.name + " выиграл";
+            
+        }
+
+        
+    }
+
+    
+
+}
+// и новый класс с основной программой
+
+using System;
+using System.Linq;
+
+namespace proger21
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Player bot = new Player();
+            Player alex = new Player(Player.VARIANTS.Scissors, "Alex");
+
+            Console.WriteLine(bot.whoWins(bot, alex));
+        }
+    }
+}
