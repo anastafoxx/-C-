@@ -1,0 +1,16 @@
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\bin\Debug\netcoreapp3.1\PingPong23.exe
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\bin\Debug\netcoreapp3.1\PingPong23.deps.json
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\bin\Debug\netcoreapp3.1\PingPong23.runtimeconfig.json
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\bin\Debug\netcoreapp3.1\PingPong23.runtimeconfig.dev.json
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\bin\Debug\netcoreapp3.1\PingPong23.dll
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\bin\Debug\netcoreapp3.1\PingPong23.pdb
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\obj\Debug\netcoreapp3.1\PingPong23.csprojAssemblyReference.cache
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\obj\Debug\netcoreapp3.1\PingPong23.Form1.resources
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\obj\Debug\netcoreapp3.1\PingPong23.Properties.Resources.resources
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\obj\Debug\netcoreapp3.1\PingPong23.csproj.GenerateResource.cache
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\obj\Debug\netcoreapp3.1\PingPong23.AssemblyInfoInputs.cache
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\obj\Debug\netcoreapp3.1\PingPong23.AssemblyInfo.cs
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\obj\Debug\netcoreapp3.1\PingPong23.csproj.CoreCompileInputs.cache
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\obj\Debug\netcoreapp3.1\PingPong23.dll
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\obj\Debug\netcoreapp3.1\PingPong23.pdb
+C:\Users\infpo\Desktop\654 Фридмана\UNITY\ItProger2021\PingPong23\obj\Debug\netcoreapp3.1\PingPong23.genruntimeconfig.cache
