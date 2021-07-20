@@ -1,0 +1,124 @@
+﻿<Window x:Class="Window25.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Window25"
+        mc:Ignorable="d"
+        Title="Program" Height="450" Width="800" ResizeMode="NoResize" 
+        Topmost="False" WindowState="Normal" Icon="./resourses/program.png">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem x:Name="menuFile" Header="file">
+                <MenuItem x:Name="createnewfile" Header="new file" Click="createnewfile_Click">
+                    <MenuItem.Icon>
+                        <Image Source="./resourses/create.png">
+                        </Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="opennewfile" Header="open file" Click="opennewfile_Click">
+                    <MenuItem.Icon>
+                        <Image Source="./resourses/open.png">
+                        </Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="savenewfile" Header="save your file" Click="savenewfile_Click">
+                    <MenuItem.Icon>
+                        <Image Source="./resourses/save.png">
+                        </Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="exit" Header="exit" Click="exit_Click">
+                    <MenuItem.Icon>
+                        <Image Source="./resourses/exit.png">
+                        </Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="menuEdit" Header="edit">
+                <MenuItem x:Name="selectFonts" Header="font">
+                    <MenuItem x:Name="timesnesroman" Header="Times New Roman" IsCheckable="True"
+                              StaysOpenOnClick="True" Click="timesnesroman_Click">
+                    </MenuItem>
+                    <MenuItem x:Name="verdana" Header="Verdana" IsCheckable="True"
+                              StaysOpenOnClick="True" Click="verdana_Click">
+                    </MenuItem>
+                </MenuItem>
+                <Separator/>
+                <MenuItem x:Name="copyText" Header="copy text" Command="ApplicationCommands.Copy"
+                          InputGestureText="ctrl + c">
+                </MenuItem>
+                <MenuItem x:Name="pasteText" Header="paste text" Command="ApplicationCommands.Paste"
+                          InputGestureText="ctrl + v">
+                </MenuItem>
+                <MenuItem x:Name="cutText" Header="cut text" Command="ApplicationCommands.Cut"
+                          InputGestureText="ctrl + x">
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button x:Name="btnsave" ToolTip="save file" Click="savenewfile_Click">
+                    <Image Source="./resourses/save.png" Height="20" Width="20"></Image>
+                </Button>
+                <Button x:Name="btnopen" ToolTip="open file" Click="opennewfile_Click">
+                    <Image Source="./resourses/open.png" Height="20" Width="20"></Image>
+                </Button>
+                <Button x:Name="btncut" ToolTip="cut" Command="ApplicationCommands.Cut">
+                    <Image Source="./resourses/cut.png" Height="20" Width="20"></Image>
+                </Button>
+                <Button x:Name="btnpaste" ToolTip="paste" Command="ApplicationCommands.Paste">
+                    <Image Source="./resourses/copy.png" Height="20" Width="20"></Image>
+                </Button>
+                <ComboBox x:Name="selectfontsize" 
+                          SelectionChanged="selectfontsize_SelectionChanged">
+                    <ComboBoxItem >10</ComboBoxItem>
+                    <ComboBoxItem IsSelected="True">14</ComboBoxItem>
+                    <ComboBoxItem >16</ComboBoxItem>
+                    <ComboBoxItem >20</ComboBoxItem>
+                    <ComboBoxItem >30</ComboBoxItem>
+                </ComboBox>
+                <Label>
+                    Font Size:
+                </Label>
+
+            </ToolBar>
+        </ToolBarTray>
+        <TabControl  Width="774" Margin="0,0,0,10">
+            <TabItem Header="Check in">
+                <Grid Background="#B0E0E6">
+                    <TextBox Background="#E0FFFF" Foreground="#00008B" Height="40"  x:Name="login"  Width="200" Margin="284,90,283.333,197.333" FontSize="18" />
+                    <PasswordBox  Height="40" Background="#E0FFFF" Foreground="#00008B" x:Name="password" Width="200" FontSize="18" />
+                    <Label Foreground="#00008B" Content="Chek in in program" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="270,44,270,0" FontSize="24" FontFamily="Tw Cen MT Condensed Extra Bold" FontWeight="Bold"/>
+                    <Button Name="regbtn" HorizontalAlignment="Center" Content="Are you ready?" Height="30"  Width="110" Margin="300,190,300,99" Foreground="#B0E0E6" Background="#00008B" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Click="regbtn_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Editor">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="texBox" Width="770" FontSize="14"/>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Users">
+                <Grid Background="#98FB98">
+                    <ListView x:Name="listusers" Background="#98FB98">
+                        <ListView.ItemTemplate >
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <TextBlock Text="User: " FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Login}"/>
+
+                                    <Button Background="#00FF00" Click="Button_Click" Content="delete" Tag="{Binding id}" ></Button>
+
+
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>
